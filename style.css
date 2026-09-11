@@ -58,3 +58,46 @@ ul { padding-left: 20px; }
 .updated { font-size: 14px; color: #7d857f; margin-bottom: 22px; }
 footer { text-align: center; padding: 40px 22px; color: #6d746f; font-size: 14px; border-top: 1px solid var(--border); margin-top: 50px; }
 footer a { margin: 0 10px; }
+
+/* ===== Large displays =====
+   The shell was pinned at 760px, which on a 2560px monitor reads as a narrow
+   column adrift in empty space. This stylesheet sizes type in px, so scaling
+   the root font would do nothing — instead the shell widens on the card-based
+   pages and the px-sized type and imagery step up with it, so everything grows
+   together rather than just the gaps. The legal pages keep a narrow column, and
+   loose body copy keeps its own measure: long legal text run to the full window
+   width would be worse than the original problem. */
+@media (min-width: 1500px) {
+  header.site, footer { max-width: 1200px; }
+  footer { margin-left: auto; margin-right: auto; }
+  body:has(.grid) .wrap { max-width: 1200px; }
+  body:has(.grid) .wrap > p,
+  body:has(.grid) .wrap > ul,
+  body:has(.grid) .wrap > .lead { max-width: 68ch; margin-left: auto; margin-right: auto; }
+  .coin { width: 150px; height: 150px; font-size: 68px; }
+  h2 { font-size: 25px; }
+  h3 { font-size: 19px; }
+  p, li { font-size: 17px; }
+  .lead { font-size: 21px; }
+  .card { padding: 24px; }
+  .card p { font-size: 16px; }
+  .card .ico { font-size: 30px; }
+  header.site .name { font-size: 22px; }
+  .logo { width: 52px; height: 52px; font-size: 25px; }
+  nav a { font-size: 16.5px; }
+}
+@media (min-width: 2000px) {
+  header.site, footer { max-width: 1420px; }
+  body:has(.grid) .wrap { max-width: 1420px; }
+  .coin { width: 174px; height: 174px; font-size: 80px; }
+  h2 { font-size: 28px; }
+  h3 { font-size: 21px; }
+  p, li { font-size: 18.5px; }
+  .lead { font-size: 23px; }
+  .card { padding: 28px; }
+  .card p { font-size: 17px; }
+  .card .ico { font-size: 34px; }
+  header.site .name { font-size: 24px; }
+  .logo { width: 58px; height: 58px; font-size: 28px; }
+  nav a { font-size: 18px; }
+}
