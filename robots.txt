@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://snrgwa-bot.github.io/coin-and-dice/sitemap.xml
